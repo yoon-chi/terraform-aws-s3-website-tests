@@ -81,3 +81,7 @@ resource "aws_s3_object" "error" {
   source       = "www/error.html"
   content_type = "text/html"
 }
+
+output "s3_bucket_name" {
+  value = aws_s3_bucket.s3_bucket.bucket
+}
